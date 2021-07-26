@@ -1,0 +1,37 @@
+/* 기본 요소 스타일링 처리 */
+/*---------------------------------------------------------------------------*/
+body {
+    font: 1em/150% Helvetica, Arial, sans-serif;
+    padding: 1em;
+    margin: 0 auto;
+    max-width: 33em;
+}
+
+@media (min-width: 70em) {
+    /* 전역 글꼴 크기의 특수한 경우를 봅시다.
+    큰 화면이나 창에서 가독성을 높이기 위해,
+    글꼴 크기를 늘립니다. */
+    body {
+        font-size : 130%;
+    }
+}
+
+h1 { 
+    font-size: 1.5em;
+}
+
+/* DOM 에 중첩된 특정 요소 처리 */
+/*-----------------------------------------------------------------------------*/
+div p, #id:first-line {
+    background-color: red;
+    border-radius : 3px;
+}
+
+div p {
+    margin : 0;
+    padding : 1em;
+}
+
+div p + p {
+    padding-top: 50;
+}
